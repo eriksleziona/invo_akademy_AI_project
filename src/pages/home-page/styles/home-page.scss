@@ -1,6 +1,60 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
-/// 
-/// 
+ @import'../../../global-styles/style.scss';
+
+$primary-bg-color: #0F162D;
+$secondary-text-color: #FFF; 
+$secondary-card-bg-color: #272D42;
+$destop-card-rounding: 24px;
+
+html {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#home-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: $primary-bg-color;
+    color: $secondary-text-color;
+}
 
 
+.heading1{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: -0.2%;
+}
+
+.home-page-left-container__banner {
+    margin-top: 9.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 24px;
+    margin-left: 152px;
+    width: 467px;
+    height: 232px;
+ 
+}
+
+.home-page-right-container {
+    margin-left: 114px;
+}
+
+.card-container {
+
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    & &__item{
+        width: 16.7rem;
+        height: 15rem;
+        background-color: $secondary-card-bg-color;
+        border-radius: $destop-card-rounding;
+    }
+    
+}
