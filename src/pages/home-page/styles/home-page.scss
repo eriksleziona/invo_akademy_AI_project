@@ -7,8 +7,9 @@ $secondary-text-color: #FFF;
 $secondary-card-bg-color: #272D42;
 $destop-card-rounding: 24px;
 $icon-color-one: #373155;
-
-
+$icon-color-two: #2C3455;
+$icon-color-three: #274255;
+$icon-color-four: #3D413F;
 html {
     font-size: 16px;
     line-height: 24px;
@@ -62,25 +63,35 @@ html {
 
         &__icon {
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 24px auto 16px auto ;
             width: 4rem;
             height: 4rem;
-            background-color: $icon-color-one;
             border-radius: $destop-card-rounding;
+
             img {
                 width: 2rem;
                 height: 2rem;
             }
         }
+  
 
     }
-
-
-    
+  
 }
 
-.helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: center;
+.icon_bg1 {
+    background-color: $icon-color-one;
+}
+.icon_bg2 {
+    background-color: $icon-color-two;
+}
+
+.icon_bg3 {
+    background-color: $icon-color-three;
+}
+.icon_bg4 {
+    background-color: $icon-color-four;
 }
