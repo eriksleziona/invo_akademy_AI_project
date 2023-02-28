@@ -6,6 +6,8 @@ $primary-bg-color: #0F162D;
 $secondary-text-color: #FFF; 
 $secondary-card-bg-color: #272D42;
 $destop-card-rounding: 24px;
+$icon-color-one: #373155;
+
 
 html {
     font-size: 16px;
@@ -22,7 +24,7 @@ html {
 
 
 .heading1{
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 500;
     line-height: 56px;
     letter-spacing: -0.2%;
@@ -45,16 +47,40 @@ html {
 }
 
 .card-container {
-
+    margin-top: 159px;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+ 
+    gap: 24px;
     & &__item{
         width: 16.7rem;
         height: 15rem;
+        text-align: center;
         background-color: $secondary-card-bg-color;
         border-radius: $destop-card-rounding;
+
+        &__icon {
+
+            margin: 24px auto 16px auto ;
+            width: 4rem;
+            height: 4rem;
+            background-color: $icon-color-one;
+            border-radius: $destop-card-rounding;
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
     }
+
+
     
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: center;
 }
