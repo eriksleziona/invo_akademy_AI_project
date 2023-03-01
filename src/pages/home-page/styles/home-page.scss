@@ -15,15 +15,30 @@ $icon-color-four: #3D413F;
 html {
     font-size: 16px;
     line-height: 24px;
+    box-sizing: border-box;
 }
 
 
 #home-page {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     background-color: $primary-bg-color;
     color: $secondary-text-color;
+
+    @media (max-width:1176px)  {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto 0 auto;
+           
+       }
+       @media (max-width: 500%){
+            width: 100%;
+
+            margin: 0 auto 0 auto;
+       }   
 }
 
 
@@ -32,6 +47,13 @@ html {
     font-weight: 500;
     line-height: 3.5rem;
     letter-spacing: -0.2%;
+
+    
+    @media (max-width: 500px) {
+        font-size: 1.875rem;
+        line-height: 40px;
+     }
+
 }
 
 .heading3 {
@@ -44,6 +66,7 @@ html {
     margin-top: 9.9rem;
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 0;
     gap: 24px;
     margin-left: 152px;
@@ -55,9 +78,18 @@ html {
         justify-content: center;
         width: 496px;
         height: 224px;
-
-       
     }
+    
+    @media (max-width: 500px) {
+        width: 100%;
+        margin: 0 16px 0 16px;
+        
+     }
+
+     &__text {
+        line-break: auto;
+        overflow-wrap: normal;
+     }
 }
 
 .home-page-left-container {
@@ -67,6 +99,11 @@ html {
         width: 31rem;
         
     }
+    
+    @media (max-width: 500px) {
+        width: 100%;
+     }
+
 }
 
 
@@ -74,20 +111,20 @@ html {
     margin: 0 auto;
 
     @media (max-width: 1176px) {
+        margin: 0 auto;
         width: 31rem;
         
     }
+    
+    @media (max-width: 500px) {
+        width: 100%;
+     }
+
 }
 
-@media (max-width:1176px)  {
-     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-        #home-page {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0 auto 0 auto;
-        }
-    }
+
+
+     
 
 .card-container {
     margin-top: 159px;
@@ -106,6 +143,11 @@ html {
         
     }
 
+    @media (max-width: 500px) {
+        flex-direction: column;
+        padding: 0 16px 0 16px;
+    }
+
     & &__item{
 
         width: 16.7rem;
@@ -119,6 +161,12 @@ html {
             width: 15rem;
             height: 13.6rem;
             text-align: center;
+        }
+
+        @media (max-width: 500px) {
+            //height: 12.25rem;
+           width: 100%;
+           border-radius: $mobile-card-rounding;
         }
 
 
