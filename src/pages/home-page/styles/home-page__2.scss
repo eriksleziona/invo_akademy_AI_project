@@ -1,0 +1,230 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+ @import'../../../global-styles/style.scss';
+
+$primary-bg-color: #0F162D;
+$secondary-text-color: #FFF; 
+$secondary-card-bg-color: #272D42;
+$destop-card-rounding: 24px;
+$mobile-card-rounding: 16px;
+$icon-color-one: #373155;
+$icon-color-two: #2C3455;
+$icon-color-three: #274255;
+$icon-color-four: #3D413F;
+
+html {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+
+}
+
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 159px 16px 140px;
+    background-color: $primary-bg-color;
+    color: $secondary-text-color;
+}
+     
+
+
+#home-page {
+    display: flex;
+    @media (max-width:1176px)  {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto 0 auto;
+           
+       }
+       @media (max-width: 500%){
+            height: 100%;
+            width: auto;
+            margin: 0 auto 0 auto;
+       }   
+}
+
+
+.heading1{
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+    letter-spacing: -0.2%;
+
+    
+    @media (max-width: 500px) {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+        margin: 0 1rem 0 1rem;
+     }
+
+}
+
+.heading3 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.home-page-left-container__banner {
+    
+    margin-top: 9.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 1.5rem;
+
+    width: 29.2rem;
+    height: 14.5rem;
+ 
+    @media (max-width: 1176px) {
+        margin: 0 auto;
+        justify-content: center;
+        width: 31rem;
+        height: 14rem;
+    }
+    
+    @media (max-width: 500px) {
+        overflow-x: hidden;
+        width: auto;
+     }
+
+     &__text {
+        line-break: auto;
+        overflow-wrap: normal;
+
+        @media (max-width: 500px) {
+            margin: 0 1rem 0 1rem;
+            width: auto;
+        }
+     }
+}
+
+.home-page-left-container {
+    
+    @media (max-width: 1176px) {
+        margin: 0 auto;
+        width: 31rem;
+        
+    }
+    
+    @media (max-width: 500px) {
+        height: auto;
+        width: auto ;     
+     }
+
+}
+
+
+.home-page-right-container {
+    margin: 0 auto;
+
+    @media (max-width: 1176px) {
+        margin: 0 auto;
+        width: 31rem;
+        
+    }
+    
+    @media (max-width: 500px) {
+        width: auto;
+     }
+
+}
+
+ 
+
+.card-container {
+    margin-top: 9.9rem;
+    display: grid;
+    grid-column: auto auto;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    align-items: center;
+    gap: 1.5rem;
+
+    @media (max-width: 1176px) {
+        margin-top: 0;
+        justify-content: center;
+        gap: 1rem;
+        
+    }
+
+    @media (max-width: 500px) {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        padding: 0 1rem 0 1rem; 
+    }
+
+    & &__item{
+
+        width: 16.7rem;
+        height: 15rem;
+        text-align: center;
+        background-color: $secondary-card-bg-color;
+        border-radius: $destop-card-rounding;
+
+
+        @media (max-width: 1176px) {
+            width: 15rem;
+            height: 13.6rem;
+            text-align: center;
+        }
+
+        @media (max-width: 500px) {
+            //height: 12.25rem;
+           width: auto;
+
+           border-radius: $mobile-card-rounding;
+        }
+
+
+
+        &__icon {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem auto 1rem auto ;
+            width: 4rem;
+            height: 4rem;
+            border-radius: $destop-card-rounding;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        p {
+            opacity: 0.5;
+
+            @media (max-width:1176px) {
+                font-size: 0.8rem;
+                line-height: 1.25rem;
+            }
+        }
+        
+
+    }
+  
+}
+
+.icon_bg1 {
+    background-color: $icon-color-one;
+}
+.icon_bg2 {
+    background-color: $icon-color-two;
+}
+
+.icon_bg3 {
+    background-color: $icon-color-three;
+}
+.icon_bg4 {
+    background-color: $icon-color-four;
+}
+

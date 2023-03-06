@@ -1,233 +1,178 @@
-/// Homepage Styles File
-/// Here we import all the Styles files we need for our Homepage.
- @import'../../../global-styles/style.scss';
+@import'../../../global-styles/style.scss';
 
-$primary-bg-color: #0F162D;
-$secondary-text-color: #FFF; 
-$secondary-card-bg-color: #272D42;
-$destop-card-rounding: 24px;
-$mobile-card-rounding: 16px;
-$icon-color-one: #373155;
-$icon-color-two: #2C3455;
-$icon-color-three: #274255;
-$icon-color-four: #3D413F;
-
-html {
-    font-size: 16px;
-    line-height: 24px;
-    
-    @media (min-width: 1469px) {
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    @media (min-width: 1837px) {
-        font-size: 24px;
-        line-height: 35px;
-    }
-
-
-}
-
-
-
-#home-page {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    background-color: $primary-bg-color;
-    color: $secondary-text-color;
-
-    @media (max-width:1176px)  {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0 auto 0 auto;
-           
-       }
-       @media (max-width: 500%){
-            width: 100%;
-
-            margin: 0 auto 0 auto;
-       }   
-}
-
-
-.heading1{
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 3.5rem;
-    letter-spacing: -0.2%;
-
-    
-    @media (max-width: 500px) {
-        font-size: 1.875rem;
-        line-height: 2.5rem;
-        margin: 0 1rem 0 1rem;
-     }
-
-}
-
-.heading3 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-}
-
-.home-page-left-container__banner {
-    
-    margin-top: 9.9rem;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
+* {
+    margin: 0;
     padding: 0;
-    gap: 1.5rem;
-    margin-left: 9.5rem;
-    width: 29.2rem;
-    height: 14.5rem;
- 
-    @media (max-width: 1176px) {
-        margin: 0 auto;
-        justify-content: center;
-        width: 31rem;
-        height: 14rem;
-    }
-    
-    @media (max-width: 500px) {
-        width: 100%;
-        
-     }
-
-     &__text {
-        line-break: auto;
-        overflow-wrap: normal;
-
-        @media (max-width: 500px) {
-            margin: 0 1rem 0 1rem;
-        }
-     }
+    font-size: 16px;
 }
 
-.home-page-left-container {
-    
-    @media (max-width: 1176px) {
-        margin: 0 auto;
-        width: 31rem;
-        
-    }
-    
-    @media (max-width: 500px) {
-        width: 100%;
-        
-     }
-
+body{
+    background-color: var(--primary-bg-color);
 }
 
 
-.home-page-right-container {
+.container {
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 159px 16px 140px;
 
-    @media (max-width: 1176px) {
-        margin: 0 auto;
-        width: 31rem;
-        
+    @media screen and (max-width:992px) {
+        padding: 247px 16px 169px;
     }
-    
-    @media (max-width: 500px) {
-        width: 100%;
-     }
 
+    @media screen and (max-width:575px){ 
+        padding: 48px 16px 64px;
+    }
 }
 
 
+.home-page-container {
+    display: flex;
+    justify-content: center;
+    gap: 109px;
+    color: var(--color-on-surface);
 
-     
+    @media screen and (max-width:992px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+.home-page-container__banner {
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    gap: 1.5rem;
+
+
+    & &__text {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        @media screen and (max-width: 992px) {
+            max-width: 496px;
+            gap: 1rem;
+        }
+
+        @media screen and (max-width:575px) {
+            max-width: 100%;
+        }
+    }
+}
+
+.home-page-container__title {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: -.002em;
+
+    @media screen and (max-width: 575px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
 
 .card-container {
-    margin-top: 9.9rem;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    align-items: center;
-    gap: 1.5rem;
+    display: grid;
+    grid-template: repeat(2,minmax(240px,1fr))/repeat(2,268px);
+    gap: 1.998rem 1.5rem;
 
-    @media (max-width: 1176px) {
-        margin-top: 0;
-        justify-content: center;
-        gap: 1rem;
-        
-    }
+    &__item {
+        position: relative;
+        background-color: var(--secondary-card-bg-color);
+        border-radius: 1.5rem;
+        padding: 1.5rem 1rem;
 
-    @media (max-width: 500px) {
-        flex-direction: column;
-        padding: 0 1rem 0 1rem;
-    }
-
-    & &__item{
-
-        width: 16.7rem;
-        height: 15rem;
-        text-align: center;
-        background-color: $secondary-card-bg-color;
-        border-radius: $destop-card-rounding;
-
-
-        @media (max-width: 1176px) {
-            width: 15rem;
-            height: 13.6rem;
-            text-align: center;
-        }
-
-        @media (max-width: 500px) {
-            //height: 12.25rem;
-           width: 100%;
-           border-radius: $mobile-card-rounding;
-        }
-
-
-
-        &__icon {
-
+       @media screen and (max-width: 992px) {
+        padding: 1.25rem 1.063rem 1.25rem 1rem ;
+       }
+       @media  screen and (max-width: 575px) {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 1.5rem auto 1rem auto ;
-            width: 4rem;
-            height: 4rem;
-            border-radius: $destop-card-rounding;
-
-            img {
-                width: 2rem;
-                height: 2rem;
-            }
-        }
-        p {
-            opacity: 0.5;
-
-            @media (max-width:1176px) {
-                font-size: 0.8rem;
-                line-height: 1.25rem;
-            }
-        }
-        
+            padding: 1.25rem;
+       }
 
     }
-  
+
+    @media (max-width: 992px) {
+        grid-template: repeat(2, minmax(218px, 1fr))/repeat(2,240px);
+        grid-auto-rows: minmax(218px, 1fr);
+        gap: 1rem
+    }
+
+    @media (max-width: 575px) {
+        grid-template: repeat(2, minmax(196px, auto))/repeat(auto-fill, 100%);
+        grid-auto-rows: minmax(196px, auto);
+    }
+}
+
+
+.card-container__desc {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    opacity: 0.5;
+
+    @media screen and (max-width:992px) {
+        font-size: .875rem;
+    }
+
+    @media screen and (max-width: 575px) {
+        font-size: 1rem;
+    }
+}
+
+.card-container__item__icon {
+    position: relative;
+    margin: 0 auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%) translateY(-50%);
+    }
+
 }
 
 .icon_bg1 {
-    background-color: $icon-color-one;
-}
+    background-color: var( --icon-color-one);
+}  
 .icon_bg2 {
-    background-color: $icon-color-two;
-}
-
+    background-color: var( --icon-color-two);
+}  
 .icon_bg3 {
-    background-color: $icon-color-three;
-}
+    background-color: var( --icon-color-three);
+}  
 .icon_bg4 {
-    background-color: $icon-color-four;
+    background-color: var( --icon-color-four);
 }
 
+.home-page-container__title {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: -.002em;
+
+    @media screen and (max-width: 575px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+.heading3 {
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
