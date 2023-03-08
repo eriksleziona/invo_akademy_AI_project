@@ -16,11 +16,11 @@ body{
     margin: 0 auto;
     padding: 159px 16px 140px;
 
-    @media screen and (max-width:992px) {
+    @media (max-width:992px) {
         padding: 247px 16px 169px;
     }
 
-    @media screen and (max-width:575px){ 
+    @media (max-width:575px){ 
         padding: 48px 16px 64px;
     }
 }
@@ -32,7 +32,7 @@ body{
     gap: 109px;
     color: var(--color-on-surface);
 
-    @media screen and (max-width:992px) {
+    @media (max-width:992px) {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
@@ -50,16 +50,16 @@ body{
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.5rem;
-
-        @media screen and (max-width: 992px) {
+    }
+        @media (max-width: 992px) {
             max-width: 496px;
             gap: 1rem;
         }
 
-        @media screen and (max-width:575px) {
+        @media (max-width:575px) {
             max-width: 100%;
         }
-    }
+
 }
 
 .home-page-container__title {
@@ -68,7 +68,7 @@ body{
     line-height: 3.5rem;
     letter-spacing: -.002em;
 
-    @media screen and (max-width: 575px) {
+    @media (max-width: 575px) {
         font-size: 2rem;
         line-height: 2.5rem;
     }
@@ -86,10 +86,10 @@ body{
         border-radius: 1.5rem;
         padding: 1.5rem 1rem;
 
-       @media screen and (max-width: 992px) {
+       @media (max-width: 992px) {
         padding: 1.25rem 1.063rem 1.25rem 1rem ;
        }
-       @media  screen and (max-width: 575px) {
+       @media (max-width: 575px) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -120,11 +120,11 @@ body{
     line-height: 1.5rem;
     opacity: 0.5;
 
-    @media screen and (max-width:992px) {
+    @media (max-width:992px) {
         font-size: .875rem;
     }
 
-    @media screen and (max-width: 575px) {
+    @media (max-width: 575px) {
         font-size: 1rem;
     }
 }
@@ -164,7 +164,7 @@ body{
     line-height: 3.5rem;
     letter-spacing: -.002em;
 
-    @media screen and (max-width: 575px) {
+    @media (max-width: 575px) {
         font-size: 2rem;
         line-height: 2.5rem;
     }
